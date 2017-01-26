@@ -1,0 +1,88 @@
+/*/////////////////////////////////
+/////////                 /////////
+/////////  Registration   /////////
+/////////                 /////////
+/////////////////////////////////*/
+
+.reg-container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 40px;
+  color: #46a9e2;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 2px solid #46a9e2;
+}
+
+.reg-container label {
+  color: white;
+  background-color: #46a9e2;
+  padding: 5px;
+  text-align: left;
+  font-size: 20px;
+}
+
+#passphrase {
+  margin: -15px 0 15px 0;
+  color: black;
+}
+
+#pricing {
+  color: black;
+  font-size: 17px;
+  padding: 0;
+}
+
+.form-inline .form-control {
+  margin-bottom: 1em;
+  width: 100%;
+}
+
+.authorization, .funds-transfer {
+  color: darkorange;
+  text-align: left;
+  font-size: 19px;
+}
+
+label.checkbox-inline {
+  background-color: #46a9e2;
+  cursor: pointer;
+  font-size: 20px;
+  margin-bottom: 10px;
+  margin-right: 2%;
+  margin-left:0;
+  padding: 5px 10px 5px 30px;
+}
+
+.submit {
+  text-align: center;
+  padding: 20px;
+}
+
+.submit button {
+  margin: 10px;
+  background-color: #46a9e2;
+}
+
+.terms {
+  font-size: 20px;
+}
+
+#scheduled-transfer {
+  margin: -10px 0 15px 0;
+  color: black;
+}
+
+#funds-agreement {
+  color: black;
+  font-size: 17px;
+  padding: 0;
+}
+
+#funds-agreement strong {
+  color: darkorange;
+  margin-bottom: 35px;
+}
+
+.warning {
+  color: red;
+}

@@ -1,0 +1,584 @@
+<div class="reg-container container">
+    <img class="col-lg-6" alt="ShipSource" data-type="logo" src="./images/ShipSource.png" />
+	<h1 class="col-lg-12">ShipLinx Registration Form</h1>
+    <h4 class="col-lg-12">(Please browse through entire form to ensure you have all the necessary information needed before you begin - your progress will not be saved)</h4>
+	<form class="field-name form-inline" name="signupForm">
+		<div class="col-lg-12">
+			<label class="col-lg-12 col-xs-12">Company Information</label>
+		</div>
+		<div class="form-group col-lg-12 col-xs-12">
+			<span ng-show="signupForm.companyName.$dirty && signupForm.companyName.$error.required">Required</span>
+			<span ng-show="signupForm.companyName.$dirty && signupForm.companyName.$error.maxlength">Too Long</span>
+			<input type="text" class="form-control input-lg" ng-model="companyName" placeholder="Company Name" name="companyName" required
+				ng-maxlength="50">
+		</div>
+		<div class="form-group col-lg-12 col-xs-12">
+			<span ng-show="signupForm.address.$dirty && signupForm.address.$error.required">Required</span>
+			<span ng-show="signupForm.address.$dirty && signupForm.address.$error.maxlength">Too Long</span>
+			<input type="text" class="form-control input-lg" ng-model="address" placeholder="Address" name="address" required ng-maxlength="50">
+		</div>
+		<div class="form-group col-lg-12 col-xs-12">
+			<span ng-show="signupForm.suite.$dirty && signupForm.suite.$error.maxlength">Too Long</span>
+			<input type="text" class="form-control input-lg" ng-model="suite" placeholder="Suite" name="suite" ng-maxlength="15">
+		</div>
+		<div class="form-group col-lg-6 col-xs-12">
+			<span ng-show="signupForm.city.$dirty && signupForm.city.$error.required">Required</span>
+			<span ng-show="signupForm.city.$dirty && signupForm.city.$error.maxlength">Too Long</span>
+			<input type="text" class="form-control input-lg" ng-model="city" placeholder="City" name="city" required ng-maxlength="50">
+		</div>
+		<div class="form-group col-lg-3 col-xs-12">
+			<span ng-show="signupForm.state.$dirty && signupForm.state.$error.required">Required</span>
+			<select class="form-control input-lg" ng-model="state" placeholder="" name="state" placeholder="" required>
+                <option value="">State</option>
+                <option value="AL">Alabama</option>
+                <option value="AK">Alaska</option>
+                <option value="AZ">Arizona</option>
+                <option value="AR">Arkansas</option>
+                <option value="CA">California</option>
+                <option value="CO">Colorado</option>
+                <option value="CT">Connecticut</option>
+                <option value="DE">Delaware</option>
+                <option value="DC">District of Columbia</option>
+                <option value="FL">Florida</option>
+                <option value="GA">Georgia</option>
+                <option value="HI">Hawaii</option>
+                <option value="ID">Idaho</option>
+                <option value="IL">Illinois</option>
+                <option value="IN">Indiana</option>
+                <option value="IA">Iowa</option>
+                <option value="KS">Kansas</option>
+                <option value="KY">Kentucky</option>
+                <option value="LA">Louisiana</option>
+                <option value="ME">Maine</option>
+                <option value="MD">Maryland</option>
+                <option value="MA">Massachusetts</option>
+                <option value="MI">Michigan</option>
+                <option value="MN">Minnesota</option>
+                <option value="FM">Micronesia</option>
+                <option value="MS">Mississippi</option>
+                <option value="MO">Missouri</option>
+                <option value="MT">Montana</option>
+                <option value="NE">Nebraska</option>
+                <option value="NV">Nevada</option>
+                <option value="NH">New Hampshire</option>
+                <option value="NJ">New Jersey</option>
+                <option value="NM">New Mexico</option>
+                <option value="NY">New York</option>
+                <option value="NC">North Carolina</option>
+                <option value="ND">North Dakota</option>
+                <option value="OH">Ohio</option>
+                <option value="OK">Oklahoma</option>
+                <option value="OR">Oregon</option>
+                <option value="PW">Palau</option>
+                <option value="PA">Pennsylvania</option>
+                <option value="SC">South Carolina</option>
+                <option value="SD">South Dakota</option>
+                <option value="TN">Tennessee</option>
+                <option value="TX">Texas</option>
+                <option value="UT">Utah</option>
+                <option value="VT">Vermont</option>
+                <option value="VA">Virginia</option>
+                <option value="WA">Washington</option>
+                <option value="WV">West Virginia</option>
+                <option value="WI">Wisconsin</option>
+                <option value="WY">Wyoming</option>
+            </select>
+		</div>
+		<div class="form-group col-lg-3 col-xs-12">
+			<span ng-show="signupForm.zip.$dirty && signupForm.zip.$error.required">Required</span>
+			<span ng-show="signupForm.zip.$dirty && signupForm.zip.$error.pattern">5-Digit Code</span>
+			<input type="text" class="form-control input-lg" ng-model="zip" placeholder="Postal Code" name="zip" required ng-pattern='/^[0-9]{5}$/'>
+		</div>
+        <div class="form-group col-lg-4 col-xs-12">
+			<span ng-show="signupForm.locations.$dirty && signupForm.locations.$error.required">Required</span>
+			<span ng-show="signupForm.locations.$dirty && signupForm.locations.$error.pattern">Numbers Only</span>
+			<input type="text" class="form-control input-lg" ng-model="locations" placeholder="# of Locations" name="locations" required ng-pattern='/^[0-9]*$/' maxlength="10">
+		</div>
+        <div class="form-group col-lg-4 col-xs-12">
+			<span ng-show="signupForm.stations.$dirty && signupForm.stations.$error.required">Required</span>
+			<span ng-show="signupForm.stations.$dirty && signupForm.stations.$error.pattern">Numbers Only</span>
+			<input type="text" class="form-control input-lg" ng-model="stations" placeholder="# of Shipping Stations" name="stations" required ng-pattern='/^[0-9]*$/' maxlength="10">
+		</div>
+        <div class="form-group col-lg-4 col-xs-12">
+			<span ng-show="signupForm.transactions.$dirty && signupForm.transactions.$error.required">Required</span>
+			<span ng-show="signupForm.transactions.$dirty && signupForm.transactions.$error.pattern">Numbers Only</span>
+			<input type="text" class="form-control input-lg" ng-model="transactions" placeholder="Transactions/Month" name="transactions" required ng-pattern='/^[0-9]*$/' maxlength="10">
+		</div>
+        <div class="form-group col-lg-4 col-xs-12">
+			<input type="text" class="form-control input-lg" ng-model="goLive" placeholder="Go-Live Date" name="goLive" maxlength="20">
+		</div>
+		<div class="col-lg-12">
+			<label class="col-lg-12 col-xs-12">Shipping Department Contact Information</label>
+		</div>
+		<div class="form-group col-lg-12 col-xs-12">
+			<span ng-show="signupForm.shippingName.$dirty && signupForm.shippingName.$error.required">Required</span>
+			<span ng-show="signupForm.shippingName.$dirty && signupForm.shippingName.$error.maxlength">Too Long</span>
+			<input type="text" class="form-control input-lg" ng-model="shippingName" placeholder="Shipping Contact Name" name="shippingName"
+				required ng-maxlength="50">
+		</div>
+		<div class="form-group col-lg-6 col-xs-12">
+			<span ng-show="signupForm.shippingPhone.$dirty && signupForm.shippingPhone.$error.required">Required</span>
+			<span ng-show="signupForm.shippingPhone.$dirty && signupForm.shippingPhone.$error.pattern">xxxxxxxxxx Format</span>
+			<input type="text" class="form-control input-lg" ng-model="shippingPhone" placeholder="Phone (Just Numbers)" name="shippingPhone"
+				required ng-pattern='/^[0-9]{10}$/' maxlength="10">
+		</div>
+		<div class="form-group col-lg-6 col-xs-12">
+			<span ng-show="signupForm.shippingEmail.$dirty && signupForm.shippingEmail.$error.required">Required</span>
+			<span ng-show="signupForm.shippingEmail.$dirty && signupForm.shippingEmail.$error.maxlength">Too Long</span>
+			<span ng-show="signupForm.shippingEmail.$dirty && signupForm.shippingEmail.$error.email">Invalid E-mail</span>
+			<input type="email" class="form-control input-lg" ng-model="shippingEmail" placeholder="E-Mail Address" name="shippingEmail"
+				required ng-maxlength="120">
+		</div>
+        <div class="col-lg-12">
+			<label class="col-lg-12 col-xs-12">I.T. Department Contact Information</label>
+		</div>
+		<div class="form-group col-lg-12 col-xs-12">
+			<span ng-show="signupForm.itName.$dirty && signupForm.itName.$error.required">Required</span>
+			<span ng-show="signupForm.itName.$dirty && signupForm.itName.$error.maxlength">Too Long</span>
+			<input type="text" class="form-control input-lg" ng-model="itName" placeholder="I.T. Contact Name" name="itName"
+				required ng-maxlength="50">
+		</div>
+		<div class="form-group col-lg-6 col-xs-12">
+			<span ng-show="signupForm.itPhone.$dirty && signupForm.itPhone.$error.required">Required</span>
+			<span ng-show="signupForm.itPhone.$dirty && signupForm.itPhone.$error.pattern">xxxxxxxxxx Format</span>
+			<input type="text" class="form-control input-lg" ng-model="itPhone" placeholder="Phone (Just Numbers)" name="itPhone"
+				required ng-pattern='/^[0-9]{10}$/' maxlength="10">
+		</div>
+		<div class="form-group col-lg-6 col-xs-12">
+			<span ng-show="signupForm.itEmail.$dirty && signupForm.itEmail.$error.required">Required</span>
+			<span ng-show="signupForm.itEmail.$dirty && signupForm.itEmail.$error.maxlength">Too Long</span>
+			<span ng-show="signupForm.itEmail.$dirty && signupForm.itEmail.$error.email">Invalid E-mail</span>
+			<input type="email" class="form-control input-lg" ng-model="itEmail" placeholder="E-Mail Address" name="itEmail"
+				required ng-maxlength="120">
+		</div>
+        <div class="col-lg-12">
+			<label class="col-lg-12 col-xs-12">Parcel Carriers</label>
+		</div>
+        <div class="form-group col-lg-12 col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th><u>Used</u></th>
+                    <th><u>Carrier</u></th>
+                    <th><u>Account Number</u></th>
+                    <th><u>Username</u></th>
+                    <th><u>Password</u></th>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="canpostChecked"></td>
+                    <td>Canada Post</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="canpostAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="canpostUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="canpostPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="canparChecked"></td>
+                    <td>Canpar</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="canparAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="canparUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="canparPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="dhlChecked"></td>
+                    <td>DHL</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="dhlAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="dhlUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="dhlPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="fedexChecked"></td>
+                    <td>FedEx</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="fedexAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="fedexUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="fedexPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="fdxsmartChecked"></td>
+                    <td>FDX SmartPost</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="fdxsmartAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="fdxsmartUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="fdxsmartPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox"  ng-model="landChecked"></td>
+                    <td>Landmark GL</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="landAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="landUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="landPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="loomisChecked"></td>
+                    <td>Loomis</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="loomisAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="loomisUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="loomisPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="newlogChecked"></td>
+                    <td>Newgistics</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="newlogAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="newlogUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="newlogPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="ontracChecked"></td>
+                    <td>OnTrac</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ontracAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ontracUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ontracPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="purChecked"></td>
+                    <td>Purolator</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="purAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="purUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="purPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="upsChecked"></td>
+                    <td>UPS</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upsAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upsUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upsPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="upsbChecked"></td>
+                    <td>UPS Basic</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upsbAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upsbUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upsbPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="upssChecked"></td>
+                    <td>UPS SurePost</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upssAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upssUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upssPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="upswChecked"></td>
+                    <td>UPS World Ease</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upswAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upswUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="upswPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="uspsChecked"></td>
+                    <td>USPS</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="uspsAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="uspsUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="uspsPass"></td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" ng-model="wwexChecked"></td>
+                    <td>WWEX</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="wwexAcct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="wwexUser"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="wwexPass"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-12">
+			<label class="col-lg-12 col-xs-12">LTL Carriers</label>
+		</div>
+        <div class="form-group col-lg-12 col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th><u>Carrier / 3PL Name</u></th>
+                    <th><u>Account Number</u></th>
+                    <th><u>Login</u></th>
+                    <th><u>Password</u></th>
+                    <th><u>Rated?</u></th>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl1Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl1Acct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl1Login"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl1Pass"></td>
+                    <td class="col-lg-1"><input type="checkbox" ng-model="ltl1Rated"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl2Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl2Acct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl2Login"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl2Pass"></td>
+                    <td class="col-lg-1"><input type="checkbox" ng-model="ltl2Rated"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl3Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl3Acct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl3Login"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl3Pass"></td>
+                    <td class="col-lg-1"><input type="checkbox" ng-model="ltl3Rated"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl4Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl4Acct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl4Login"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl4Pass"></td>
+                    <td class="col-lg-1"><input type="checkbox" ng-model="ltl4Rated"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl5Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl5Acct"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl5Login"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="ltl5Pass"></td>
+                    <td class="col-lg-1"><input type="checkbox" ng-model="ltl5Rated"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-12">
+            <label class="col-lg-12 col-xs-12">Services to Rate Shop</label>
+        </div>
+         <div class="form-group col-lg-12 col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="col-lg-3"><u>Name</u></th>
+                    <th class="col-lg-9 "><u>Services to Rate</u></th>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Example: "Cheapest"</td>
+                    <td style="height: 35px;">UPS Ground, USPS Priority Mail, Fedex Ground</td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop1Name"> </td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop1Services"> </td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop2Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop2Services"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop3Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop3Services"></td>
+                </tr>
+                <tr>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop4Name"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="rateshop4Services"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-12">
+            <label class="col-lg-12 col-xs-12">Hardware</label>
+        </div>
+         <div class="form-group col-lg-12 col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="col-lg-3"><u>Type</u></th>
+                    <th class="col-lg-3"><u>Make</u></th>
+                    <th class="col-lg-3"><u>Model</u></th>
+                    <th class="col-lg-3"><u>Connection (e.g. USB)</u></th>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Scale</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="scaleMake"> </td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="scaleModel"> </td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="scaleConnType"> </td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Label Printer</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="labelPrinterMake"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="labelPrinterModel"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="labelPrinterConnType"></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Report / Docs Printer</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="reportDocsPrinterMake"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="reportDocsPrinterModel"></td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 35px; padding: 0px;" ng-model="reportDocsPrinterConnType"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-12">
+            <label class="col-lg-12 col-xs-12">Questionnaire</label>
+        </div>
+         <div class="form-group col-lg-12 col-xs-12">
+            <span>Answers required, use N/A if a question does not apply</span>
+            <table class="table table-bordered">
+                <tr>
+                    <th class="col-lg-8"><u>Questions</u></th>
+                    <th class="col-lg-4 "><u>Responses</u></th>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Do you ship international?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="intQuest" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">If yes, what International Reports do you print?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="intReportQuest" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Do you want to see Negotiated Rates or List Rates?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="negotiatedOrListedRates" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Do you ship HazMat? If yes, what software do you use?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="hazmat" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">What special services do you use?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="specialServices" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">If you ship LTL, what are your dock open &amp; close times?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="dockTimes" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">What current processes or features does your current software do?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="softwareFeatures" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Are you able to allocate a shipping station for only testing? If no, what’s the availability on a shipping station in a day-to-day basis?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="shippingStation" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Any special label requirements? If so, please list all:</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="labelReqs" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Are you able to install and have TeamViewer running consistently on the testing station during development?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="teamViewerAvail" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Do you have a TEST database or only a Live one?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="database" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Do you use package insurance?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="pkgIns" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">Do you batch ship?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="batchShip" required></td>
+                </tr>
+                <tr>
+                    <td style="height: 35px;">What shipment data needs to be written back to your DB?</td>
+                    <td style="padding: 0px;"><input type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="shipmentData" required></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-12">
+            <label class="col-lg-12 col-xs-12">Please list your process flow for the following:</label>
+        </div>
+        <div class="form-group col-lg-12 col-xs-12">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="col-lg-3" style="height: 50px;">Step-by-step order shipment process</th>
+                    <td class="col-lg-9" style="padding: 0px;"><textarea type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="shipmentProcess"></textarea></td>
+                </tr>
+                <tr>
+                    <th class="col-lg-3" style="height: 50px;">Business Rules</th>
+                    <td class="col-lg-9" style="padding: 0px;"><textarea type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="businessRules"></textarea></td>
+                </tr>
+                <tr>
+                    <th class="col-lg-3" style="height: 50px;">Special Notes / Forms</th>
+                    <td class="col-lg-9" style="padding: 0px;"><textarea type="text" style="width: 100%; height: 100%; padding: 0px;" ng-model="notesForms"></textarea></td>
+                </tr>
+            </table>
+        </div>
+        <div class="form-group col-lg-12 col-xs-12">
+            <p>Please note: Any business rules requested that are not listed on this registration document or discussed beforehand may cause delays in your software setup, installation, and/or integration development</p><br>
+        </div>
+		<!--<div class="col-lg-12">
+			<label class="col-lg-12 col-xs-12">Billing Information</label>
+		</div>
+		<div class="form-group col-lg-4 col-xs-12">
+			<span ng-show="signupForm.billingTypeSelection.$dirty && signupForm.billingTypeSelection.$error.required">Required</span>
+			<select class="form-control input-lg" ng-model="billing.type" ng-change="billingType()" name="billingTypeSelection" placeholder=""
+				required>
+            <option value="">Select Billing Type</option>
+            <option value="creditCard">Credit Card</option>
+            <option value="ach">ACH</option>
+        </select>
+		</div>
+		<div class="col-lg-12" ng-show="creditCard">
+			<label class="col-lg-12 col-xs-12">Credit Card Information</label>
+		</div>
+		<div class="form-group col-lg-4 col-xs-12" ng-show="creditCard">
+			<select class="form-control input-lg" ng-model="ccType" name="ccType" placeholder="">
+            <option value="">Credit Card Type</option>
+            <option value="Visa">Visa</option>
+            <option value="Mastercard">Mastercard</option>
+            <option value="Discover">Discover</option>
+            <option value="AmericanExpress">American Express</option>
+        </select>
+		</div>
+		<div class="form-group col-lg-5 col-xs-12" ng-show="creditCard">
+			<span ng-show="signupForm.creditCardNumber.$dirty && signupForm.creditCardNumber.$error.required">Required</span>
+			<input type="text" class="form-control input-lg" ng-model="creditCardNumber" placeholder="Credit Card Number" name="creditCardNumber">
+		</div>
+		<div class="form-group col-lg-3 col-xs-12" ng-show="creditCard">
+			<span ng-show="signupForm.ccv.$dirty && signupForm.ccv.$error.pattern">3 Or 4 Digit Number</span>
+			<input type="text" class="form-control input-lg" ng-model="ccv" placeholder="CCV" name="ccv" ng-pattern='/^[0-9]{3,4}$/'>
+		</div>
+		<div class="form-group col-lg-4 col-xs-12" ng-show="creditCard">
+			<span ng-show="signupForm.expirationMonth.$dirty && signupForm.expirationMonth.$error.required">Required</span>
+			<select class="form-control input-lg" ng-model="expirationMonth" name="expirationMonth" placeholder="">
+            <option value="">Month</option>
+            <option>January</option>
+            <option>February</option>
+            <option>March</option>
+            <option>April</option>
+            <option>May</option>
+            <option>June</option>
+            <option>July</option>
+            <option>August</option>
+            <option>September</option>
+            <option>October</option>
+            <option>November</option>
+            <option>December</option>
+        </select>
+		</div>
+		<div class="form-group col-lg-5 col-xs-12" ng-show="creditCard">
+			<span ng-show="signupForm.expirationYear.$dirty && signupForm.expirationYear.$error.pattern">YYYY Format</span>
+			<span ng-show="signupForm.expirationYear.$dirty && signupForm.expirationYear.$error.required">Required</span>
+			<input type="text" class="form-control input-lg" ng-model="expirationYear" placeholder="Expiration Year (YYYY)" name="expirationYear"
+				ng-pattern='/^20[1-9][0-9]$/'>
+		</div>
+		<div class="col-lg-12" ng-show="ach">
+			<label class="col-lg-12 col-xs-12">Bank Account Information</label>
+		</div>
+		<div class="form-group col-lg-6 col-xs-12" ng-show="ach">
+			<input type="text" class="form-control input-lg" ng-model="accountNumber" placeholder="Account Number" name="accountNumber">
+		</div>
+		<div class="form-group col-lg-6 col-xs-12" ng-show="ach">
+			<input type="text" class="form-control input-lg" ng-model="routingNumber" placeholder="Routing Number" name="routingNumber">
+		</div>-->
+        <div class="form-group col-lg-12 col-xs-12">
+			<label class="col-lg-12 col-xs-12">Terms</label>
+		</div>
+        <div class="form-group col-lg-12 col-xs-12">
+            <P>
+                <ol class="terms">
+                    <li>Upon completion of this form, ShipSource will email a final copy of this form with the subject line of "Registration Complete" and will deliver the system exactly as described herein.</li><br>
+                    <li>Client agrees to start using solution on or before the Go Live Date above:
+                        <ul>
+                            <li>If client has received Setup Fee incentive, failure to meet go live date will result in loss of incentive.</li>
+                            <li>System changes made after Registration Complete will be added but will not delay go live date.</li>
+                            <li> Client license is active at Registration Complete and payments begin on the first billing cycle after the go live date above whether or not client is using the system.</li><br>
+                        </ul>
+                    </li>
+
+                </ol>
+            </P>
+        </div>
+        <div class="form-group col-lg-3 col-xs-12">
+            <span>I agree to these terms:</span>
+			<span ng-show="signupForm.agree.$dirty && signupForm.agree.$error.required">(Required)</span>
+            <select class="form-control input-lg" ng-model="agree" placeholder="" name="agree" ng-change="agreement()" placeholder="" required>
+                <option value=""></option>
+                <option value="yes">YES</option>
+                <option value="no">NO</option>
+			</select>
+        </div>
+        <div class="form-group col-lg-9 col-xs-12">
+            <p class="warning" ng-show="terms">
+                <strong>Please contact your sales representative to discuss your disagreement of these terms</strong>
+            </p>
+        </div>
+		<div class="submit col-lg-12 col-xs-12">
+            <span class="warning" ng-show="signupForm.$invalid || signupForm.$pristine">Not all required fields are filled out, please go back and check for missing information</span><br>
+			<button ng-show="submitButton" type="button" class="btn btn-danger btn-lg" ng-disabled="signupForm.$invalid || signupForm.$pristine"
+				ng-click="submittedForm()">SUBMIT FORM</button>
+		</div>
+	</form>
+</div>

@@ -1,0 +1,255 @@
+<div>
+    <h1>ShipLinx Registration Form</h1>
+    <div>
+        <h3>Company Information</h3>
+    </div>
+    <div>
+        Company Name: <b>{{company}}</b>
+    </div>
+    <div>
+        Address: <b>{{address}}</b>
+    </div>
+    <div>
+        Suite: <b>{{suite}}</b>
+    </div>
+    <div>
+        City: <b>{{city}}</b>
+    </div>
+    <div>
+        State: <b>{{state}}</b>
+    </div>
+    <div>
+        Zip: <b>{{zip}}</b>
+    </div>
+    <div>
+        Number of Locations: <b>{{locations}}</b>
+    </div>
+    <div>
+        Number of Shipping Stations: <b>{{stations}}</b>
+    </div>
+    <div>
+        Transactions/Month: <b>{{transactions}}</b>
+    </div>
+    <div>
+        Go Live Date: <b>{{goLive}}</b>
+    </div>
+    <div>
+        <h3>Shipping Department Contact Information</h3>
+    </div>
+    <div>
+        Shipping Contact Name: <b>{{shippingName}}</b>
+    </div>
+    <div>
+        Shipping Contact Phone Number: <b>{{shippingPhone}}</b>
+    </div>
+    <div>
+        Shipping Contact E-Mail Address: <b>{{shippingEmail}}</b>
+    </div>
+    <div>
+        <h3>I.T. Department Contact Information</h3>
+    </div>
+    <div>
+        IT Contact Name: <b>{{itName}}</b>
+    </div>
+    <div>
+        IT Contact Phone Number: <b>{{itPhone}}</b>
+    </div>
+    <div>
+        IT Contact E-Mail Address: <b>{{itEmail}}</b>
+    </div>
+    <div>
+        <h3>Parcel Carriers</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    <u>Carrier</u>
+                </th>
+                <th>
+                    <u>Account Number</u>
+                </th>
+                <th>
+                    <u>Username</u>
+                </th>
+                <th>
+                    <u>Password</u>
+                </th>
+            </tr>
+            {{#each carriersUsed}}
+            <tr>
+                <td>
+                    <b>{{Name}}</b>
+                </td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 100%; padding: 0px; text-align: center;" value="{{AccountNumber}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 100%; padding: 0px; text-align: center;" value="{{Username}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 100%; padding: 0px; text-align: center;" value="{{Password}}"></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+    <div>
+        <h3>LTL Carriers</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    <u>Carrier-3PL Name</u>
+                </th>
+                <th>
+                    <u>Account Number</u>
+                </th>
+                <th>
+                    <u>Login</u>
+                </th>
+                <th>
+                    <u>Password</u>
+                </th>
+                <th>
+                    <u>Rated?</u>
+                </th>
+            </tr>
+            {{#each ltlCarriersUsed}}
+            <tr>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 100%; padding: 0px; text-align: center;" value="{{ltlName}}">
+                </td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 100%; padding: 0px; text-align: center;" value="{{ltlAccountNumber}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 100%; padding: 0px; text-align: center;" value="{{ltlLogin}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 100%; padding: 0px; text-align: center;" value="{{ltlPassword}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 50px; height: 100%; padding: 0px; text-align: center;" value="{{ltlRated}}"></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+    <div>
+        <h3>Services to Rate Shop</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    <u>Name</u>
+                </th>
+                <th>
+                    <u>Services to Rate</u>
+                </th>
+            </tr>
+            {{#each rateshops}}
+            <tr>
+                <td style="padding: 0px;"><input type="text" style="height: 35px; padding: 0px; text-align: center;" value="{{rateshopName}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 500px; height: 35px; padding: 0px; text-align: center;" value="{{rateshopServices}}"></td>
+            </tr>
+            {{/each}}
+        </table>
+    </div>
+    <div>
+        <h3>Hardware</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <th>
+                    <u>Type</u>
+                </th>
+                <th>
+                    <u>Make</u>
+                </th>
+                <th>
+                    <u>Model</u>
+                </th>
+                <th>
+                    <u>Connection (e.g. USB)</u>
+                </th>
+            </tr>
+            <tr>
+                <td>
+                    <b>Scale</b>
+                </td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{scale.scaleMake}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{scale.scaleModel}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{scale.scaleConnectionType}}"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Label Printer</b>
+                </td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{labelPrinter.labelPrinterMake}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{labelPrinter.labelPrinterModel}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{labelPrinter.labelPrinterConnectionType}}"></td>
+            </tr>
+            <tr>
+                <td>
+                    <b>Report / Docs Printer</b>
+                </td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{reportPrinter.reportPrinterMake}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{reportPrinter.reportPrinterModel}}"></td>
+                <td style="padding: 0px;"><input type="text" style="width: 200px; height: 35px; padding: 0px; text-align: center" value="{{reportPrinter.reportPrinterConnectionType}}"></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h3>Questionnaire</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td style="height: 35px;">Do you ship international? - <b>{{questionnaire.intQuest}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">If yes, what International Reports do you print? - <b>{{questionnaire.intReportQuest}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">Do you want to see Negotiated Rates or List Rates? - <b>{{questionnaire.negotiatedOrListedRates}}</b></td>
+            <tr>
+                <td style="height: 35px;">Do you ship HazMat? If yes, what software do you use? - <b>{{questionnaire.hazmat}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">What special services do you use? - <b>{{questionnaire.specialServices}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">If you ship LTL, what are your dock open &amp; close times? - <b>{{questionnaire.dockTimes}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">What current processes or features does your current software do? - <b>{{questionnaire.softwareFeatures}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">Are you able to allocate a shipping station for only testing? If not, what’s the availability on a shipping station in a day-to-day basis? - <b>{{questionnaire.shippingStation}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">Any special label requirements? If so, please list all: <b>{{questionnaire.labelReqs}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">Are you able to install and have TeamViewer running consistently on the testing station during development? - <b>{{questionnaire.teamViewerAvail}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">Do you have a TEST database or only a Live one? - <b>{{questionnaire.database}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">Do you use package insurance? - <b>{{questionnaire.pkgIns}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">Do you batch ship? - <b>{{questionnaire.batchShip}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 35px;">What shipment data needs to be written back to your DB? - <b>{{questionnaire.shipmentData}}</b></td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <h3>Please list your process flow for the following:</h3>
+    </div>
+    <div>
+        <table>
+            <tr>
+                <td style="height: 50px;">Order to Shipment Process: <b>{{shipmentProcess}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 50px;">Special Business Rules: <b>{{businessRules}}</b></td>
+            </tr>
+            <tr>
+                <td style="height: 50px;">Special Notes / Forms: <b>{{notesForms}}</b></td>
+            </tr>
+        </table>
+    </div>
+</div>
